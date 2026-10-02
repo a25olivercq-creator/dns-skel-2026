@@ -1,0 +1,6 @@
+
+zone "starwars.lan" {
+    type primary;
+    file "";
+};
+
