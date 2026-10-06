@@ -1,6 +1,6 @@
 
 zone "starwars.lan" {
     type primary;
-    file "";
+    file "/etc/bind/db.starwars.lan";
 };
 
