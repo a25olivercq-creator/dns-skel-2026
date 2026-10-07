@@ -8,20 +8,20 @@ $TTL 1D
 
 ; Servidores de nomes
 @           IN          NS      darthvader.starwars.lan.
+@           IN          NS      darthsidious.starwars.lan.
 
 ; Rexistros A dos Servidores de nomes
 darthvader    IN        A       192.168.20.10
+darthsidious  IN        A       192.168.20.11
 skywalker     IN        A       192.168.20.101
 skywalker     IN        A       192.168.20.111
 luke          IN        A       192.168.20.22
-darthsidious  IN        A       192.168.20.11
 yoda          IN        A       192.168.20.25
 yoda          IN        A       192.168.20.24
 c3p0          IN        A       192.168.20.26
-palpatine     IN        CNAME   darthsidious
-              IN        MX      10  c3p0.starwars.lan
-lenda         IN        TXT     "Que a forza te acompanhe"
-darthsidious  IN        NS      darthsidious.starwars.lan                
+palpatine     IN        CNAME   darthsidious.starwars.lan.
+@             IN        MX      10  c3p0
+lenda         IN        TXT     "Que a forza te acompanhe"                  
 
 
 
