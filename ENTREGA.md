@@ -67,41 +67,38 @@
 
 **Salida de comandos**
 
-        root@darthvader:/etc/bind# nslookup darthvader.starwars.lan localhost
-        nslookup skywalker.starwars.lan\302\240localhost
-        nslookup starwars.lan localhost
-        nslookup -q=mx starwars.lan localhost
-        nslookup -q=ns starwars.lan localhost
-        nslookup -q=soa starwars.lan localhost
-        nslookup -q=txt lenda.starwars.lan localhost
-        nslookup 192.168.20.11 localhost
+        root@darthvader:/var/cache/bind# nslookup 192.168.20.11 localhost
+        11.20.168.192.in-addr.arpa	name = darthsidious.starwars.lan.
+
+        root@darthvader:/var/cache/bind# nslookup skywalker.starwars.lan localhost
         Server:		localhost
         Address:	127.0.0.1#53
 
-        Name:	darthvader.starwars.lan
-        Address: 192.168.20.10
+        Name:	skywalker.starwars.lan
+        Address: 192.168.20.111
+        Name:	skywalker.starwars.lan
+        Address: 192.168.20.101
 
-        Server:		127.0.0.11
-        Address:	127.0.0.11#53
-
-        ** server can't find skywalker.starwars.lan\194\160localhost: NXDOMAIN
-
+        root@darthvader:/var/cache/bind# nslookup starwars.lan localhost
         Server:		localhost
         Address:	127.0.0.1#53
 
         *** Can't find starwars.lan: No answer
 
+        root@darthvader:/var/cache/bind# nslookup -q=mx starwars.lan localhost
         Server:		localhost
         Address:	127.0.0.1#53
 
         starwars.lan	mail exchanger = 10 c3p0.starwars.lan.
 
+        root@darthvader:/var/cache/bind# nslookup -q=ns starwars.lan localhost
         Server:		localhost
         Address:	127.0.0.1#53
 
         starwars.lan	nameserver = darthvader.starwars.lan.
         starwars.lan	nameserver = darthsidious.starwars.lan.
 
+        root@darthvader:/var/cache/bind# nslookup -q=soa starwars.lan localhost
         Server:		localhost
         Address:	127.0.0.1#53
 
@@ -114,11 +111,12 @@
                 expire = 604800
                 minimum = 86400
 
+        root@darthvader:/var/cache/bind# nslookup -q=txt lenda.starwars.lan localhost
         Server:		localhost
         Address:	127.0.0.1#53
 
         lenda.starwars.lan	text = "Que a forza te acompanhe"
 
-        ;; Got SERVFAIL reply from 127.0.0.1, trying next server
-        ;; Got SERVFAIL reply from 127.0.0.1
-        ** server can't find 11.20.168.192.in-addr.arpa: SERVFAIL
+        root@darthvader:/var/cache/bind# nslookup 192.168.20.11 localhost
+        11.20.168.192.in-addr.arpa	name = darthsidious.starwars.lan.
+
