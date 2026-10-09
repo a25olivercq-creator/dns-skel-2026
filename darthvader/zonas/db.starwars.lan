@@ -1,6 +1,6 @@
 $TTL 1D
 @           IN          SOA     darthvader.starwars.lan. admin.exemplo.lan.(
-                                2025101303  ; Serial (YYYYMMDDnn)
+                                2025101304  ; Serial (YYYYMMDDnn)
                                 8H          ; Refresh
                                 2H          ; Retry
                                 1W          ; Expire
@@ -22,6 +22,6 @@ c3p0          IN        A       192.168.20.26
 palpatine     IN        CNAME   darthsidious.starwars.lan.
 @             IN        MX      10  c3p0
 lenda         IN        TXT     "Que a forza te acompanhe"                  
-
+chewbacca     IN        a       192.168.20.28
 
 
