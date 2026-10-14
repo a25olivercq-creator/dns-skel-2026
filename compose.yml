@@ -30,7 +30,18 @@ services:
         ipv4_address: 192.168.20.11
     volumes:
       - ./darthsidius/named.conf.local/named.conf.local:/etc/bind/named.conf.local
-
+  delegado:
+    build: dnsserver
+    hostname: delegado
+    depends_on:
+      - mandalorian
+      - darthvader
+    networks:
+      rededns:
+        ipv4_address: 192.168.20.8
+    volumes:
+      - ./delegado/named.conf.local/named.conf.local:/etc/bind/named.conf.local
+      - ./delegado/zonas/db.outrotest.starwars.lan:/etc/bind/db.outrotest.starwars.lan
   cliente:
     build: cliente
     hostname: cliente1

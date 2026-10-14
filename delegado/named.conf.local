@@ -1,17 +1,10 @@
 
-
-
-zone "imperio.starwars.lan" {
-	type primary;
-    file "/etc/bind/db.imperio.starwars.lan";
+zone "outrotest.starwars.lan" {
+    type primary;
+    file "/etc/bind/db.outrotest.starwars.lan";
+    allow-transfer {key "chave-starwars";};
 };
 
-// zone "starwars.lan" {
-//     type forward;
-//     forward only;
-//     forwarders {
-//         192.168.20.10;
-//     };
-// };
+
 
 

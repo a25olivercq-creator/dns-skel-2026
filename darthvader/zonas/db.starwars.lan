@@ -24,4 +24,16 @@ palpatine     IN        CNAME   darthsidious.starwars.lan.
 lenda         IN        TXT     "Que a forza te acompanhe"                  
 chewbacca     IN        a       192.168.20.28
 
+$ORIGIN test.starwars.lan.
+proba1  IN  A   192.168.20.5
+proba2  IN  A   192.168.20.6
 
+yoda2.starwars.lan.  IN  A   10.0.0.6
+
+$ORIGIN starwars.lan
+
+yoda3.starwars.lan.  IN  A   10.0.0.7
+
+$ORIGIN outrotest.starwars.lan.
+@   IN  NS kk
+kk  IN  A  192.168.20.8

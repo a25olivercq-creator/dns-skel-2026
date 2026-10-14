@@ -1,0 +1,13 @@
+$TTL 1D
+@           IN          SOA     delegado.outrotest.starwars.lan. admin.exemplo.lan.(
+                                2025101304  ; Serial (YYYYMMDDnn)
+                                8H          ; Refresh
+                                2H          ; Retry
+                                1W          ; Expire
+                                1D )        ; Minimum TTL
+
+; Servidores de nomes
+@           IN          NS      delegado.outrotest.starwars.lan.
+outrotest   IN          A       192.168.20.8
+abc         IN          A       192.168.30.45
+def         IN          A       142.18.35.5
