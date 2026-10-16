@@ -15,4 +15,14 @@ zone "20.168.192.in-addr.arpa"{
     allow-transfer {key "chave-starwars";};
 };
 
+key "rndc-key" {
+	algorithm hmac-sha256;
+	secret "n0NiY/7XXMeXZAgbU8et0WmnTnVhsvKfJxgM6URMtpo=";
+};
 
+
+include "/etc/bind/rndc.key";
+controls {
+    inet 127.0.0.1 port 953 allow { 127.0.0.1; } keys { "rndc-key"; };
+    inet 192.168.20.10 port 953 allow { 192.168.20.10; } keys { "chave-remota"; };
+};
